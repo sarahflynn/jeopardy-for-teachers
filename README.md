@@ -25,7 +25,7 @@ Alternatively, this updated version of the game can be found on GitHub: https:/
 	* From your personal dashboard, you can either play a saved game board you already created, or you can create a new game board (for info about how to create a gameboard, see instructions below)
 	* Choose a name for your game (for example: “2nd period History”). This allows us to save your progress in the game so that you can stop in the middle of a game and continue it at a later time.
 	* Choose names for the teams of students in your classroom
-  * Decide which team will take the first turn
+	* Decide which team will take the first turn
 	* Continue through the instructions page to the game play page
   * Teams take turns choosing a category and point value. In this classroom version of Jeopardy, each team's turn is over after they answer or decide not to answer one clue.
 	* If the team answers correctly, the clue point value is added to their score. If the answer is incorrect, the clue point value is subtracted from their score. If they decide not to attempt to answer, no points are added or subtracted from their score.
@@ -34,15 +34,15 @@ Alternatively, this updated version of the game can be found on GitHub: https:/
 ### How to Create a New Board
 
 	* Select "Make a New Game Board" from your dashboard page
-  * Choose a game board name (for example: "American History 1776-1812"). This game board will be saved to your dashboard and can be played multiple times (e.g. "2nd period History Fall 2018", "4th period History Fall 2017"). 
+	* Choose a game board name (for example: "American History 1776-1812"). This game board will be saved to your dashboard and can be played multiple times (e.g. "2nd period History Fall 2018", "4th period History Fall 2017"). 
   * Select the name for your first category
   * Add 6 clues and answers to your game board by either writing your own custom clues and answers, searching the database of historical Jeopardy clues and answers by keyword, or some combination of both.
   * Continue with these last steps until you have a full game board with 6 categories and 6 clues each.
 
 ## Acknowledgements
 
-	*	Inspired by Jeopardy https://www.jeopardy.com/
+Inspired by Jeopardy https://www.jeopardy.com/
 
 ## Who Can Use This App
 
-	* This app is for use by educators in a classroom setting for educational purposes
+This app is for use by educators in a classroom setting for educational purposes
