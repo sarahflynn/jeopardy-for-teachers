@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http-server.js",
+  "scripts": {
+    "create-historic-tables-mac": "psql jeopardy < ./database/jeopardy745pm0910.sql",
+    "create-historic-tables-pc": "psql -U postgres jeopardy < ./database/jeopardy745pm0910.sql",
+    "create-user-tables": "node scripts/create-tables.js",
+    "seed-user-data": "node scripts/seed-user-data.js",
+    "drop-tables": "node scripts/drop-tables.js",
+    "reload-all-mac": "npm run drop-tables && npm run create-user-tables && npm run seed-user-data && npm run create-historic-tables-mac",
+    "reload-all-pc": "npm run drop-tables && npm run create-user-tables && npm run seed-user-data && npm run create-historic-tables-pc",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "exit 0",
+    "start:watch": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Sarah, Sophie, Mike, and Claire",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "pg": "^7.4.3",
+    "morgan": "^1.9.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "nodemon": "^1.18.4"
+  }
+}
