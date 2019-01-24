@@ -9,7 +9,7 @@
       <RouterLink v-if="user" class="navlink" to="/" @click.prevent="handleSignOut">My Dashboard</RouterLink>
       <RouterLink v-if="!user" class="navlink" to="/auth">Sign in</RouterLink>
       <RouterLink class="navlink" to="/about">About</RouterLink>
-      <RouterLink class="navlink" to="/instructions">How to Play</RouterLink>
+      <RouterLink class="navlink" to="/how-to-play">How to Play</RouterLink>
       <RouterLink class="navlink" to="/contact">Contact</RouterLink>
     </nav>
 
@@ -48,10 +48,6 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Anton|Arimo:700|Crimson+Text|Fascinate|Montserrat');
-
-* {
-  margin: 0;
-}
 
 header {
   background-color: rgb(6, 11, 141);
