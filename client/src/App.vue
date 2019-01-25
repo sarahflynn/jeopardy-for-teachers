@@ -11,8 +11,7 @@
       <RouterLink class="navlink" to="/about">About</RouterLink>
       <a v-if="user" class="navlink" href="/" @click.prevent="handleSignOut">Sign Out</a>
     </nav>
-
-    <p class="user-message" v-if="user">You are signed in as {{ user.name }}</p>
+    
     <p class="user-message" v-if="!user">Welcome! Please sign in or sign up.</p>
 
     <RouterView class="routes" :onUser="handleUser" :user="user"></RouterView>
