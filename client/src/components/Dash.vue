@@ -1,6 +1,6 @@
 <template>
   <div v-if="user">
-    <h1>Dashboard</h1>
+    <h2>Dashboard</h2>
     <br>
     <div id="options">
       <router-link to="/game">Play Game</router-link>
@@ -69,7 +69,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
   #options {
     text-align: center;
