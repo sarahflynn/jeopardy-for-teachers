@@ -12,7 +12,6 @@ import CustomClue from './components/CustomClue';
 import GamePlay from './components/GamePlay';
 import YourBoard from './components/YourBoard';
 import About from './components/About.vue';
-import Contact from './components/Contact.vue';
 import HowToPlay from './components/HowToPlay.vue';
 
 export default new VueRouter({
@@ -21,7 +20,6 @@ export default new VueRouter({
     { path: '/', component: Dash },
     { path: '/auth', component: Auth },
     { path: '/about', component: About },
-    { path: '/contact', component: Contact },
     { path: '/how-to-play', component: HowToPlay },
     { path: '/board', component: BoardName },
     { path: '/board/:id', component: CategoryName },

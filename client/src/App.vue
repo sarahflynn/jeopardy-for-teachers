@@ -6,14 +6,14 @@
 
     <nav>
       <RouterLink v-if="user" class="navlink" to="/">My Dashboard</RouterLink>
-      <RouterLink v-if="user" class="navlink" to="/" @click.prevent="handleSignOut">My Dashboard</RouterLink>
       <RouterLink v-if="!user" class="navlink" to="/auth">Sign in</RouterLink>
-      <RouterLink class="navlink" to="/about">About</RouterLink>
       <RouterLink class="navlink" to="/how-to-play">How to Play</RouterLink>
-      <RouterLink class="navlink" to="/contact">Contact</RouterLink>
+      <RouterLink class="navlink" to="/about">About</RouterLink>
+      <a v-if="user" class="navlink" href="/" @click.prevent="handleSignOut">Sign Out</a>
     </nav>
 
-    <span class="user" v-if="user">Hello {{ user.name }}!</span>
+    <p class="user-message" v-if="user">You are signed in as {{ user.name }}</p>
+    <p class="user-message" v-if="!user">Welcome! Please sign in or sign up.</p>
 
     <RouterView class="routes" :onUser="handleUser" :user="user"></RouterView>
   </div>
@@ -37,11 +37,14 @@ export default {
     handleSignOut() {
       signOut();
       this.user = null;
-      this.$router.push('/');
+      this.$router.push('/auth');
     }
   },
   created() {
     this.user = checkForToken();
+    if(!this.user) {
+      this.$router.push('/auth');
+    }
   }
 };
 </script>
@@ -96,31 +99,10 @@ nav .navlink:hover {
     color: rgba(6, 14, 233, 0.);
 }
 
-
-
-/* nav {
-    margin: 0;
-    padding: 10px 10px 10px 10px;
-    width: 100%;
-    background-color: rgb(59, 59, 117);
-    height: 20px;
-    color: white;
-    text-align: center
-}
-
-nav a {
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: rgb(82, 137, 255);
-} */
-
-.user {
-  text-align: left;
+.user-message {
+  text-align: center;
   margin-right: 0;
+  margin: 45px;
 }
 
 </style>
