@@ -1,7 +1,8 @@
 .env
 node_modules
 .DS_Store
-/dist
+/client/dist
+/server/public
 
 # Log files
 npm-debug.log*
