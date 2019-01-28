@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "scripts": {
     "build:server": "cd client && npm run build && npm run copy",
-    "serve": "cd client && npm run serve",
-    "start:watch": "cd server && npm run start:watch"
+    "start": "cd server && node server.js"
   }
 }
