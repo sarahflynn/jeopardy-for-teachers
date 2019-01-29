@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "scripts": {
     "build:server": "cd client && npm run build && npm run copy",
-    "start": "cd server && npm start"
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "dotenv": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
