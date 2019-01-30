@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <header>
+    <!-- <header>
       <h1 id="logo">JEOPARDY FOR TEACHERS</h1>
-    </header>
+    </header> -->
 
     <nav>
       <RouterLink v-if="user" class="navlink" to="/">My Dashboard</RouterLink>

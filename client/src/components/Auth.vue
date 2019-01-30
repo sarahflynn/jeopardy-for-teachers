@@ -1,43 +1,45 @@
 <template>
-  <div>
-    <h2>{{ label }}</h2>
-    <div class="auth-toggle">
-      <button @click="type = isSignUp ? 'signIn' : 'signUp'" class="button-block">
-      {{
-        isSignUp
-          ? "Already a user? Click here to sign in!"
-          : "New? Click here to sign up!"
-      }}
-      </button>
-    </div>
-      <pre>{{ error }}</pre>
-      <form @submit.prevent="handleSubmit">
-        <div class="form-input">
-          <label>
-            Username:
-            <input class="login" v-model="credentials.name">
-          </label>
-        </div>
-        <div class="form-input">
-          <label>
-            Password:
-            <input 
-              class="login"
-              :type="show ? 'text' : 'password'"
-              v-model="credentials.password">
-          </label>
-          <button
-            @click="show = !show"
-            type="button"
-            class="button-inline">
-          {{ show ? 'Hide' : 'Show' }}
-          </button>
-        </div>
-        <br/>
-        <button type="submit" class="login button-block">
-          Submit
+  <div class="sign-in">
+    <div class="layer">
+      <h2>{{ label }}</h2>
+      <div class="auth-toggle">
+        <button @click="type = isSignUp ? 'signIn' : 'signUp'" class="button-block">
+        {{
+          isSignUp
+            ? "Already a user? Click here to sign in!"
+            : "New? Click here to sign up!"
+        }}
         </button>
-      </form>
+      </div>
+        <pre>{{ error }}</pre>
+        <form @submit.prevent="handleSubmit">
+          <div class="form-input">
+            <label>
+              Username:
+              <input class="login" v-model="credentials.name">
+            </label>
+          </div>
+          <div class="form-input">
+            <label>
+              Password:
+              <input 
+                class="login"
+                :type="show ? 'text' : 'password'"
+                v-model="credentials.password">
+            </label>
+            <button
+              @click="show = !show"
+              type="button"
+              class="button-inline">
+            {{ show ? 'Hide' : 'Show' }}
+            </button>
+          </div>
+          <br/>
+          <button type="submit" class="login button-block">
+            Submit
+          </button>
+        </form>
+      </div>
   </div>
 </template>
 
@@ -93,7 +95,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
   .auth-toggle {
     text-align: center;
@@ -102,6 +104,23 @@ export default {
 
   .login {
     margin-bottom: 1%;
+  }
+
+  .sign-in {
+    background-image:
+      url("../../img/landscape-mountains.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  .layer {
+    background-size: cover;
+    background-color: rgba(190, 196, 223, 0);
+    min-width: 100vw;
+    min-height: 100vh;
   }
 
 </style>
