@@ -3,6 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    letter-spacing: .5px;
+    color: rgb(6, 11, 141);
 }
 
 body, button, input {
@@ -16,12 +18,46 @@ h2 {
 
 h3 {
   margin: 25px 0 12px;
-  text-align: left;
+  text-align: center;
 }
 
 h4, h5, h6, p {
   margin-bottom: 16px;
   font-size: 18px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.button-block {
+  display: block;
+  margin: auto;
+  background-color: rgb(107, 53, 235);
+  color: rgb(255, 255, 255);
+  padding: 7px 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button-inline {
+  display: inline-block;
+  margin: 0 15px;
+  background-color: rgb(228, 229, 231);
+  padding: 6px 10px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+input {
+  padding: 5px;
+  width: 250px;
+  font-size: 14px;
+  margin-left: 15px;
 }
 
 a {

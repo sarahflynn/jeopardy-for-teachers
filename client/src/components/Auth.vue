@@ -2,7 +2,7 @@
   <div>
     <h2>{{ label }}</h2>
     <div class="auth-toggle">
-      <button @click="type = isSignUp ? 'signIn' : 'signUp'">
+      <button @click="type = isSignUp ? 'signIn' : 'signUp'" class="button-block">
       {{
         isSignUp
           ? "Already a user? Click here to sign in!"
@@ -12,26 +12,29 @@
     </div>
       <pre>{{ error }}</pre>
       <form @submit.prevent="handleSubmit">
-        <label>
-          Username:
-          <input class="login" v-model="credentials.name">
-        </label>
-        <br>
-        <label>
-          Password:
-          <input 
-            class="login"
-            :type="show ? 'text' : 'password'"
-            v-model="credentials.password">
-        </label>
-        <button
-          @click="show = !show"
-          type="button"
-        >
-        {{ show ? 'Hide' : 'Show' }}
-        </button>
+        <div class="form-input">
+          <label>
+            Username:
+            <input class="login" v-model="credentials.name">
+          </label>
+        </div>
+        <div class="form-input">
+          <label>
+            Password:
+            <input 
+              class="login"
+              :type="show ? 'text' : 'password'"
+              v-model="credentials.password">
+          </label>
+          <button
+            @click="show = !show"
+            type="button"
+            class="button-inline">
+          {{ show ? 'Hide' : 'Show' }}
+          </button>
+        </div>
         <br/>
-        <button type="submit" class="login">
+        <button type="submit" class="login button-block">
           Submit
         </button>
       </form>
