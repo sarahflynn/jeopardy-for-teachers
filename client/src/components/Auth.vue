@@ -14,19 +14,15 @@
         <pre>{{ error }}</pre>
         <form @submit.prevent="handleSubmit">
           <div class="form-input">
-            <label>
-              Username:
-              <input class="login" v-model="credentials.name">
-            </label>
+            <label>Username</label>
+            <input class="login" v-model="credentials.name">
           </div>
           <div class="form-input">
-            <label>
-              Password:
+            <label>Password</label>
               <input 
                 class="login"
                 :type="show ? 'text' : 'password'"
                 v-model="credentials.password">
-            </label>
             <button
               @click="show = !show"
               type="button"
@@ -115,12 +111,4 @@ export default {
     min-width: 100vw;
     min-height: 100vh;
   }
-
-  .layer {
-    background-size: cover;
-    background-color: rgba(190, 196, 223, 0);
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-
 </style>

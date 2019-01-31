@@ -3,38 +3,27 @@
     <form @submit.prevent="handleSubmit">
       <h2>Select a Board</h2>
       <ul v-if="boards">
-        <label v-for="board in boards" 
-          :key="board.id" 
-          class="board">
+        <label v-for="board in boards" :key="board.id" class="board">
           <input type="radio" :value="board.id" v-model="boardId">
           {{ board.name }}
         </label>
       </ul>
       <h2>Add Class Name</h2>
-      <label>
-        Class Name: 
-        <input 
-          type="text" 
-          name="className" 
-          placeholder="Class Name" 
-          v-model="className" 
-          required>
-      </label>
+      <label>Class Name</label>
+      <input type="text" name="className" placeholder="Class Name" v-model="className" required>
       <button>Next</button>
     </form>
   </div>
 </template>
 
 <script>
-
-import { getBoards, addGame } from '../services/api';
+import { getBoards, addGame } from "../services/api";
 
 export default {
-  props: {
-  },
+  props: {},
   data() {
     return {
-      className: '',
+      className: "",
       boards: null,
       boardId: null
     };
@@ -55,22 +44,18 @@ export default {
   },
   methods: {
     handleSubmit() {
-      
       const game = {
         className: this.className,
         boardId: this.boardId
       };
-      return addGame(game)
-        .then(saved => {
-          this.game = saved;
-          this.$router.push(`/game/${this.game.id}`);
-        });
+      return addGame(game).then(saved => {
+        this.game = saved;
+        this.$router.push(`/game/${this.game.id}`);
+      });
     }
   }
 };
-
 </script>
 
 <style>
-
 </style>

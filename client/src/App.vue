@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <header>
-      <h1 id="logo">JEOPARDY FOR TEACHERS</h1>
-    </header> -->
-
     <nav>
       <RouterLink v-if="user" class="navlink" to="/">My Dashboard</RouterLink>
       <RouterLink v-if="!user" class="navlink" to="/auth">Sign in</RouterLink>
@@ -12,7 +8,7 @@
       <a v-if="user" class="navlink" href="/" @click.prevent="handleSignOut">Sign Out</a>
     </nav>
 
-    <RouterView class="routes" :onUser="handleUser" :user="user"></RouterView>
+    <RouterView id="app-view" class="routes" :onUser="handleUser" :user="user"></RouterView>
   </div>
 </template>
 
@@ -47,28 +43,15 @@ export default {
 </script>
 
 <style scoped>
+@import "../css/variables.css";
 @import url('https://fonts.googleapis.com/css?family=Anton|Arimo:700|Crimson+Text|Fascinate|Montserrat');
-
-header {
-  background-color: rgb(6, 11, 141);
-}
-
-#logo {
-  text-align: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  font-family: 'Fascinate', sans-serif;
-  font-size: 4em;
-  font-weight: bold;
-  color: rgba(255, 255, 255);
-}
 
 h1 {
   text-align: center;
 }
 
 nav {
-    background-color: rgba(6, 14, 233, 0.52);
+    background-color: var(--theme0);
     width: 100vw;
     display: flex;
     z-index: 999;
@@ -92,7 +75,7 @@ nav .navlink {
 }
 
 nav .navlink:hover {
-    background-color: rgb(163, 166, 243);
+    background-color: var(--theme1);
     color: rgba(6, 14, 233, 0.);
 }
 
@@ -102,4 +85,13 @@ nav .navlink:hover {
   margin: 45px;
 }
 
+#app-view {
+  background-image:
+    url("../img/landscape-mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
 </style>

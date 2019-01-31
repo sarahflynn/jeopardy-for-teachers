@@ -79,10 +79,7 @@ export default {
     margin: 0 2%;
   }
 
-  h2, h3, h4 {
-    text-align: center;
-    margin: 5% 0 2% 0;
-  }
+
 
   ul {
     text-align: center;

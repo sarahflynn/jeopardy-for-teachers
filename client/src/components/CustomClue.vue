@@ -17,7 +17,7 @@
         placeholder="Answer"
         v-model="answer" 
         required>
-        <label>Select point value: 
+        <label>Select point value</label>
           <select 
           name="value"
           placeholder="Please choose a point value"
@@ -29,7 +29,6 @@
           <option value="400">400</option>
           <option value="500">500</option>
           </select>
-        </label>
       </div>
       <button>Submit</button>
     </form>

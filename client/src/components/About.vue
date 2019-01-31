@@ -6,14 +6,18 @@
 
     <h3>Who Can Use This App</h3>
     <p>This app is only for use by educators in a classroom setting for educational purposes.</p>
-    
+
     <h3>Acknowledgements</h3>
-    <p>Inspired by <a href="https://www.jeopardy.com/">Jeopardy.</a> Please support their wonderful program by visiting their site and tuning in to the show.</p>
+    <p>Inspired by
+      <a href="https://www.jeopardy.com/">Jeopardy.</a> Please support their wonderful program by visiting their site and tuning in to the show.
+    </p>
 
     <h3>App Developers</h3>
     <p>
       This version of the Jeopardy for Teachers app was created by:
-      <a href="https://github.com/sarahflynn">Sarah Flynn</a>.
+      <a
+        href="https://github.com/sarahflynn"
+      >Sarah Flynn</a>.
     </p>
     <p>The idea started as a student team project, the first draft of which was created in a five day coding sprint by:</p>
     <ul>
@@ -32,8 +36,11 @@
       </li>
     </ul>
 
-    <p>You can see the code for the team version of this app at
-      <a href="https://github.com/teamupcube">TeamUpCube's Github</a>.
+    <p>
+      You can see the code for the team version of this app at
+      <a
+        href="https://github.com/teamupcube"
+      >TeamUpCube's Github</a>.
     </p>
   </section>
 </template>

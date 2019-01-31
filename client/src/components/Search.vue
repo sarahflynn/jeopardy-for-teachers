@@ -22,8 +22,7 @@
           <p>Clue: {{ historicClue.clue }}</p>
           <p>Answer: {{ historicClue.answer }}</p>
           <div class="select-points">
-            <label>
-              Select point value
+            <label>Select point value</label>
               <select name="value" v-model="value">
                 <option :value="100">100</option>
                 <option :value="200">200</option>
@@ -31,7 +30,6 @@
                 <option :value="400">400</option>
                 <option :value="500">500</option>
               </select>
-            </label>
             <button @click="handleAdd" :value="historicClue.id">Add this clue to your board</button>
           </div>
         </div>

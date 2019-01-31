@@ -4,9 +4,8 @@
       <div class="team-list">
         <div v-if="teams.length<4">
           <h2>Add Teams</h2>
-          <label>
-            Team Name: <input type="text" v-model="teamName"> 
-          </label>
+          <label>Team Name</label>
+             <input type="text" v-model="teamName"> 
           <button>Add</button>
         </div>
       </div>
