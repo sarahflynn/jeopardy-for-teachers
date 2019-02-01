@@ -63,12 +63,13 @@ nav {
   width: 100vw;
   display: flex;
   z-index: 999;
-  position: fixed;
+  position: relative;
   top: 0;
 }
 
 nav .navlink {
   flex-grow: 2;
+  position: relative;
   display: inline-block;
   text-align: center;
   font-size: 4.5vw;
@@ -139,6 +140,7 @@ nav .navlink:hover {
   justify-content: center;
   align-items: center;
   margin: 5vw 5vw 0;
+  position: absolute; 
 }
 
 .icon input {
@@ -169,16 +171,22 @@ input:checked ~ .hamburger::after {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    position: relative;
+
   }
 
   nav .navlink {
     width: 100vw;
+    height: 50px;
   }
 
   .active {
     background-color: var(--theme0a)
   }
 
+  nav {
+    position: relative;
+  }
   
 }
 </style>
