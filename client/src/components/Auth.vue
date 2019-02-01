@@ -1,6 +1,5 @@
 <template>
   <div class="sign-in">
-    <div class="layer">
       <h2>{{ label }}</h2>
       <div class="auth-toggle">
         <button @click="type = isSignUp ? 'signIn' : 'signUp'" class="button-block">
@@ -35,7 +34,6 @@
             Submit
           </button>
         </form>
-      </div>
   </div>
 </template>
 

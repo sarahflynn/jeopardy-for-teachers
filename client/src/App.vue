@@ -2,7 +2,6 @@
   <div id="app">
     <nav>
       <RouterLink v-if="user" class="navlink" to="/">My Dashboard</RouterLink>
-      <RouterLink v-if="!user" class="navlink" to="/auth">Sign in</RouterLink>
       <RouterLink class="navlink" to="/how-to-play">How to Play</RouterLink>
       <RouterLink class="navlink" to="/about">About</RouterLink>
       <a v-if="user" class="navlink" href="/" @click.prevent="handleSignOut">Sign Out</a>
@@ -85,7 +84,7 @@ nav .navlink:hover {
   margin: 45px;
 }
 
-#app-view {
+#app {
   background-image:
     url("../img/landscape-mountains.jpg");
   background-size: cover;
