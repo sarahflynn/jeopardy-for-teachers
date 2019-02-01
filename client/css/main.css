@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     letter-spacing: .5px;
-    color: var(--theme0);
+    color: var(--theme4);
 }
 
 body, button, input {
@@ -28,10 +28,21 @@ h4, h5, h6, p {
   font-size: 18px;
 }
 
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--theme4);
+}
+
+label {
+  color: var(--theme4);
+}
+
 .form-input {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   margin: 30px;
 }
 
@@ -41,7 +52,7 @@ h4, h5, h6, p {
   background-color: var(--theme1);
   border: none;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: var(--theme4);
   padding: 7px 15px;
   font-weight: 600;
   font-size: 14px;
@@ -50,9 +61,10 @@ h4, h5, h6, p {
 .button-inline {
   display: inline-block;
   margin: 0 15px;
-  background-color: rgb(228, 229, 231);
+  background-color: var(--theme3);
+  color: var(--theme1);
   padding: 6px 10px;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 12px;
   border-radius: 5px;
 }
