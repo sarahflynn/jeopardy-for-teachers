@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav>
+    <nav v-bind:class="{active: checkboxToggle}">
       <div class="icon">
         <input id="hamburger" type="checkbox" v-model="checkboxToggle">
         <label for="hamburger" class="hamburger"></label>
@@ -85,8 +85,8 @@ nav .navlink {
 }
 
 nav .navlink:hover {
-  background-color: var(--theme1);
-  color: rgba(6, 14, 233, 0);
+  background-color: var(--theme1a);
+
 }
 
 .user-message {
@@ -138,7 +138,7 @@ nav .navlink:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5vw;
+  margin: 5vw 5vw 0;
 }
 
 .icon input {
@@ -173,7 +173,10 @@ input:checked ~ .hamburger::after {
 
   nav .navlink {
     width: 100vw;
-    background-color: green;
+  }
+
+  .active {
+    background-color: var(--theme0a)
   }
 
   
