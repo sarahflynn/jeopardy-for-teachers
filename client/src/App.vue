@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <nav>
+    <!-- <nav>
       <RouterLink v-if="user" class="navlink" to="/">My Dashboard</RouterLink>
       <RouterLink class="navlink" to="/how-to-play">How to Play</RouterLink>
       <RouterLink class="navlink" to="/about">About</RouterLink>
       <a v-if="user" class="navlink" href="/" @click.prevent="handleSignOut">Sign Out</a>
-    </nav>
+    </nav> -->
 
     <RouterView id="app-view" class="routes" :onUser="handleUser" :user="user"></RouterView>
   </div>

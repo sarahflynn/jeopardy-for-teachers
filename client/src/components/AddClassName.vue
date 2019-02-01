@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import { getBoards, addGame } from "../services/api";
+import { getBoards, addGame } from '../services/api';
 
 export default {
   props: {},
   data() {
     return {
-      className: "",
+      className: '',
       boards: null,
       boardId: null
     };

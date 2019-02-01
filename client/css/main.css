@@ -12,8 +12,13 @@ body, button, input {
   font-family: 'Montserrat', sans-serif;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 h2 {
-  padding: 60px 0 40px;
+  padding: 0px 0 40px;
   text-align: center;
   color: var(--theme4);
 }
@@ -95,7 +100,16 @@ section {
   margin: auto;
 }
 
-.layer {
-  background-color: red;
+.section-background1 {
+  background-color: var(--theme1a);
+  padding: 5vw;
   margin: 5vw;
+  border-radius: 20px;
+}
+
+.error {
+  color: var(--theme4);
+  font-size: 4.5vw;
+  padding: 5px;
+  text-align: center;
 }
