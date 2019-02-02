@@ -98,8 +98,8 @@ export default {
 }
 
 .app-name {
-  padding: 20px 20px 20px;
-  /* background-image: linear-gradient(var(--theme0a), transparent); */
+  padding: 85px 20px 20px;
+  background-image: linear-gradient(var(--theme0a), transparent);
 }
 
 h1 {

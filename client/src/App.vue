@@ -140,7 +140,7 @@ nav .navlink:hover {
   justify-content: center;
   align-items: center;
   margin: 5vw 5vw 0;
-  position: absolute; 
+  position: absolute;
 }
 
 .icon input {
@@ -172,12 +172,11 @@ input:checked ~ .hamburger::after {
     flex-direction: column;
     width: 100vw;
     position: relative;
-
   }
 
   nav .navlink {
     width: 100vw;
-    height: 50px;
+    padding-top: 20px;
   }
 
   .active {
