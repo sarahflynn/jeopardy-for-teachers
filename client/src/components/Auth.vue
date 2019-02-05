@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { signUp, signIn } from '../services/api';
+import { signUp, signIn } from "../services/api";
 
 export default {
   props: {
@@ -47,25 +47,25 @@ export default {
   data() {
     return {
       credentials: {
-        name: '',
-        password: ''
+        name: "",
+        password: ""
       },
       show: false,
-      type: 'signIn',
+      type: "signIn",
       error: null
     };
   },
   computed: {
     isSignUp() {
-      return this.type === 'signUp';
+      return this.type === "signUp";
     },
     label() {
-      return this.isSignUp ? 'Sign Up' : 'Sign In';
+      return this.isSignUp ? "Sign Up" : "Sign In";
     }
   },
   watch: {
     type(newType, oldType) {
-      if(newType !== oldType) {
+      if (newType !== oldType) {
         this.error = null;
       }
     }
@@ -77,7 +77,7 @@ export default {
       action(this.credentials)
         .then(user => {
           this.onUser(user);
-          this.$router.push('/');
+          this.$router.push("/");
         })
         .catch(err => {
           this.error = err;
@@ -88,6 +88,20 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Gyparody Bold";
+  src: url("../../assets/font/gyparody.heavy.ttf");
+}
+@font-face {
+  font-family: "Gyparody";
+  src: url("../../assets/font/gyparody.regular.ttf");
+}
+
+h1 {
+  font-family: "Gyparody Bold", "Times New Roman", Times, serif;
+  text-align: center;
+}
+
 .auth-toggle {
   text-align: center;
   margin: -1% 0 5% 0;
@@ -110,10 +124,14 @@ h1 {
 }
 
 .line1 {
-  font-size: 10vw;
+  font-family: "Gyparody Bold", "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 14vw;
 }
 
 .line2 {
-  font-size: 7.5vw;
+  font-family: "Gyparody", "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 6.5vw;
 }
 </style>

@@ -54,8 +54,13 @@ export default {
 <style scoped>
 @import "../css/variables.css";
 @import url("https://fonts.googleapis.com/css?family=Anton|Arimo:700|Crimson+Text|Fascinate|Montserrat");
+@font-face {
+  font-family: "Gyparody Bold";
+  src: url(../assets/font/gyparody.heavy.ttf);
+}
 
 h1 {
+  font-family: "Gyparody Bold", 'Times New Roman', Times, serif;
   text-align: center;
 }
 
@@ -97,7 +102,7 @@ nav .navlink:hover {
 }
 
 #app {
-  background-image: url("../img/landscape-mountains.jpg");
+  background-image: url("../assets/img/landscape-mountains.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
