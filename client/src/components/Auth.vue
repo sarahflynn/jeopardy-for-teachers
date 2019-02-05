@@ -1,9 +1,5 @@
 <template>
   <div class="sign-in">
-    <div class="app-name">
-      <h1 class="line1">Jeopardy</h1>
-      <h1 class="line2">for Teachers</h1>
-    </div>
     <div class="section-background1">
       <h2>{{ label }}</h2>
       <div class="auth-toggle">
@@ -38,7 +34,7 @@
 </template>
 
 <script>
-import { signUp, signIn } from "../services/api";
+import { signUp, signIn } from '../services/api';
 
 export default {
   props: {
@@ -47,25 +43,25 @@ export default {
   data() {
     return {
       credentials: {
-        name: "",
-        password: ""
+        name: '',
+        password: ''
       },
       show: false,
-      type: "signIn",
+      type: 'signIn',
       error: null
     };
   },
   computed: {
     isSignUp() {
-      return this.type === "signUp";
+      return this.type === 'signUp';
     },
     label() {
-      return this.isSignUp ? "Sign Up" : "Sign In";
+      return this.isSignUp ? 'Sign Up' : 'Sign In';
     }
   },
   watch: {
     type(newType, oldType) {
-      if (newType !== oldType) {
+      if(newType !== oldType) {
         this.error = null;
       }
     }
@@ -77,7 +73,7 @@ export default {
       action(this.credentials)
         .then(user => {
           this.onUser(user);
-          this.$router.push("/");
+          this.$router.push('/');
         })
         .catch(err => {
           this.error = err;
@@ -92,15 +88,7 @@ export default {
   font-family: "Gyparody Bold";
   src: url("../../assets/font/gyparody.heavy.ttf");
 }
-@font-face {
-  font-family: "Gyparody";
-  src: url("../../assets/font/gyparody.regular.ttf");
-}
 
-h1 {
-  font-family: "Gyparody Bold", "Times New Roman", Times, serif;
-  text-align: center;
-}
 
 .auth-toggle {
   text-align: center;
@@ -111,27 +99,5 @@ h1 {
   margin-bottom: 1%;
 }
 
-.app-name {
-  padding: 85px 20px 20px;
-  background-image: linear-gradient(var(--theme0a), transparent);
-}
 
-h1 {
-  text-align: center;
-  font-weight: 900;
-  color: var(--theme4);
-  text-shadow: var(--theme0) 2px 2px 2px;
-}
-
-.line1 {
-  font-family: "Gyparody Bold", "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 14vw;
-}
-
-.line2 {
-  font-family: "Gyparody", "Times New Roman", Times, serif;
-  text-align: center;
-  font-size: 6.5vw;
-}
 </style>
